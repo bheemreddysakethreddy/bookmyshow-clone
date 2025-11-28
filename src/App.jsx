@@ -1,4 +1,4 @@
-import { BrowserRouter , Routes, Route } from "react-router-dom";
+import { HashRouter , Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -10,7 +10,7 @@ import Sports from "./pages/Sports";
 
 export default function App() {
   return (
-    <BrowserRouter basename="/bookmyshow-clone">
+    <HashRouter>
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="grow">
@@ -25,6 +25,6 @@ export default function App() {
         </main>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
