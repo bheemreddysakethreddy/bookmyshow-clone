@@ -7,6 +7,7 @@ export default function Booking() {
 
   const rows = 6;
   const seatsPerRow = 8;
+  
   const HOLD_DURATION_MS = 20000;
   const CHECK_INTERVAL_MS = 1000;
 
