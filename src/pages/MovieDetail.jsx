@@ -11,8 +11,8 @@ export default function MovieDetail() {
       .then((data) => setMovie(data))
       .catch((err) => console.error("Error fetching show details:", err));
   }, [id]);
-
-  if (!movie) return <div className="text-center mt-10 text-gray-600">Loading...</div>;
+  if (!movie) return <div className="text-center mt-10 text-gray-600">unable to fetch details of the movie you are looking for</div>;
+  console.log(movie.summary)
 
   return (
     <div className="p-8 flex flex-col md:flex-row items-center gap-8">

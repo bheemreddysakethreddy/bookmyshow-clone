@@ -12,17 +12,17 @@ export default function Navbar() {
         🎬 BookMyShow
       </Link>
 
-      <div className="space-x-6">
-        <NavLink to="/" className={linkStyle}>
-          Movies
-        </NavLink>
-        <NavLink to="/events" className={linkStyle}>
-          Events
-        </NavLink>
-        <NavLink to="/sports" className={linkStyle}>
-          Sports
-        </NavLink>
-      </div>
+        <div className="space-x-6">
+          <NavLink to="/" className={linkStyle}>
+            Movies
+          </NavLink>
+          <NavLink to="/events" className={linkStyle}>
+            Events
+          </NavLink>
+          <NavLink to="/sports" className={linkStyle}>
+            Sports
+          </NavLink>
+        </div>
     </nav>
   );
 }

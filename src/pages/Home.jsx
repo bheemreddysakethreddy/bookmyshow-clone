@@ -11,12 +11,14 @@ export default function Home() {
     setLoading(true);
     try {
       const randomIds = Array.from({ length: 10 }, () =>
-        Math.floor(Math.random() * 250) + 1
+        Math.floor(Math.random() * 250) +1
       );
+      console.log(randomIds)
       const promises = randomIds.map((id) =>
         fetch(`https://api.tvmaze.com/shows/${id}`).then((res) => res.json())
       );
       const results = await Promise.all(promises);
+      console.log(results)
       setShows(results.filter((s) => s && s.name)); // filter out nulls
     } catch (err) {
       console.error("Error fetching random shows:", err);
@@ -27,6 +29,7 @@ export default function Home() {
 
   // Fetch search results
   const fetchSearchResults = async (term) => {
+
     setLoading(true);
     try {
       const res = await fetch(`https://api.tvmaze.com/search/shows?q=${term}`);
@@ -47,7 +50,7 @@ export default function Home() {
       } else {
         fetchRandomShows(); // Default random shows
       }
-    }, 500);
+    }, 1000);
     return () => clearTimeout(delay);
   }, [query]);
 
